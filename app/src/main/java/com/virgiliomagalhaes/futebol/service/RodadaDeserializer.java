@@ -43,6 +43,8 @@ public class RodadaDeserializer implements JsonDeserializer<Rodada> {
   private static final String ESCUDO_PEQUENO = "30x30";
   private static final String ESCUDO_MEDIO = "45x45";
   private static final String ESCUDO_GRANDE = "60x60";
+  private static final String DATA_GLOBAL = "yyyy-MM-dd hh:mm:ss";
+  private static final String DATA_JOGO = "dd/MM - HH:mm";
 
   @Override
   public Rodada deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context)
@@ -114,12 +116,16 @@ public class RodadaDeserializer implements JsonDeserializer<Rodada> {
         partida.setClubeVisitante(clube);
       }
 
-      SimpleDateFormat formatoDataServico = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+      SimpleDateFormat formatoDataServico = new SimpleDateFormat(DATA_GLOBAL);
       Date data = null;
 
       try {
         data = formatoDataServico.parse(partida.getPartidaData());
         partida.setDataFormatada(data);
+
+        SimpleDateFormat formatoDataJogo = new SimpleDateFormat(DATA_JOGO);
+        String dataPartida = formatoDataJogo.format(data);
+        partida.setPartidaData(dataPartida);
       } catch (ParseException e) {
         Log.e("ParseException", e.getMessage());
       }

@@ -31,6 +31,7 @@
           android:layout_height="match_parent"
           android:layout_width="match_parent"
           android:orientation="vertical"
+          android:layout_gravity="center"
           >
 
         <TextView
@@ -40,6 +41,7 @@
             android:textColor="@color/primary_dark_material_dark"
             android:textSize="14sp"
             android:text="@{partida.local}"
+            android:layout_gravity="center"
             />
 
         <RelativeLayout
@@ -56,6 +58,7 @@
               android:textSize="14sp"
               android:text="@{partida.clubeCasa.abreviacao}"
               android:layout_alignParentLeft="true"
+              android:layout_marginRight="6dp"
               />
 
           <ImageView
@@ -107,6 +110,7 @@
               android:textSize="14sp"
               android:text="@{partida.clubeVisitante.abreviacao}"
               android:layout_alignParentRight="true"
+              android:layout_marginLeft="6dp"
               />
 
           <ImageView
@@ -123,7 +127,9 @@
         <View
             android:background="@color/cardview_dark_background"
             android:layout_width="match_parent"
-            android:layout_height="1dp"/>
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
 
         <TextView
             android:id="@+id/text_view_data_hora"

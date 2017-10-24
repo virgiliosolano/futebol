@@ -9,6 +9,9 @@ import com.virgiliomagalhaes.futebol.databinding.ItemClubeBinding;
 import com.virgiliomagalhaes.futebol.databinding.ItemPartidaBinding;
 import com.virgiliomagalhaes.futebol.model.Clube;
 import com.virgiliomagalhaes.futebol.model.Partida;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 /**

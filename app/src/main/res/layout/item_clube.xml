@@ -32,7 +32,18 @@
           android:layout_height="wrap_content"
           android:layout_width="wrap_content"
           android:textColor="@color/primary_dark_material_dark"
-          android:textSize="14sp"
+          android:textSize="16sp"
+          android:layout_gravity="center_vertical"
+          android:layout_marginRight="12dp"
+          />
+
+      <ImageView
+          android:adjustViewBounds="true"
+          android:id="@+id/image_view_escudo"
+          android:layout_height="@dimen/image_size"
+          android:layout_width="@dimen/image_size"
+          android:layout_marginRight="12dp"
+          app:imageUrl="@{clube.escudo.grande}"
           />
 
       <TextView
@@ -41,15 +52,7 @@
           android:layout_width="wrap_content"
           android:text="@{clube.nome}"
           android:textColor="@color/primary_dark_material_dark"
-          android:textSize="14sp"
-          />
-
-      <ImageView
-          android:adjustViewBounds="true"
-          android:id="@+id/image_view_escudo"
-          android:layout_height="@dimen/image_size"
-          android:layout_width="@dimen/image_size"
-          app:imageUrl="@{clube.escudo.grande}"
+          android:textSize="18sp"
           />
     </LinearLayout>
   </android.support.v7.widget.CardView>
