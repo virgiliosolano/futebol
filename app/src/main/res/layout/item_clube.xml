@@ -1,0 +1,57 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <data>
+    <variable
+        name="clube"
+        type="com.virgiliomagalhaes.futebol.model.Clube"
+        />
+  </data>
+  <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_marginLeft="12dp"
+      android:layout_marginRight="12dp"
+      android:layout_marginTop="6dp"
+      card_view:cardBackgroundColor="@android:color/white"
+      card_view:cardCornerRadius="2dp"
+      card_view:cardElevation="2sp"
+      card_view:cardUseCompatPadding="true"
+      card_view:contentPadding="10dp"
+      >
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        >
+
+      <TextView
+          android:id="@+id/text_view_posicao"
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:textColor="@color/primary_dark_material_dark"
+          android:textSize="14sp"
+          />
+
+      <TextView
+          android:id="@+id/text_view_nome_time"
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:text="@{clube.nome}"
+          android:textColor="@color/primary_dark_material_dark"
+          android:textSize="14sp"
+          />
+
+      <ImageView
+          android:adjustViewBounds="true"
+          android:id="@+id/image_view_escudo"
+          android:layout_height="@dimen/image_size"
+          android:layout_width="@dimen/image_size"
+          app:imageUrl="@{clube.escudo.grande}"
+          />
+    </LinearLayout>
+  </android.support.v7.widget.CardView>
+</layout>
+
