@@ -8,7 +8,6 @@
       android:id="@+id/main_content"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:fitsSystemWindows="true"
       tools:context="com.virgiliomagalhaes.futebol.app.MainActivity"
       >
 
@@ -27,9 +26,8 @@
           android:background="?attr/colorPrimary"
           app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
           app:popupTheme="@style/AppTheme.PopupOverlay"
-          >
-
-      </android.support.v7.widget.Toolbar>
+          app:layout_collapseMode="pin"
+          />
 
       <android.support.design.widget.TabLayout
           android:id="@+id/tabs"
